@@ -1,0 +1,439 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F4F4F4;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* Color Palette */
+:root {
+  --color-primary: #0C2B4E;
+  --color-secondary: #1A3D64;
+  --color-accent: #1D546C;
+  --white: #F4F4F4;
+  --gray-50: #F4F4F4;
+  --gray-100: #F4F4F4;
+  --gray-800: #0C2B4E;
+  --overlay: rgba(0, 0, 0, 0.5);
+  --primary-50: #F4F4F4;
+  --secondary-50: #F4F4F4;
+  --accent-50: #F4F4F4;
+}
+
+/* Override Bootstrap card styles to prevent interference */
+.card {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.mb-2{
+  text-align: center !important;
+}
+
+.mb-4{
+  text-align: center !important;
+}
+
+.text-gray-700{
+  text-align: left !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-primary);
+  padding: 1rem;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+}
+
+#introduction, #predictive-analytics, #deployment {
+  background-color: var(--white);
+}
+
+#projects-showcase, #productivity, #conclusion {
+  background-color: var(--gray-100);
+}
+
+.section-primary { background-color: var(--primary-50) !important; }
+.section-secondary { background-color: var(--secondary-50) !important; }
+.section-accent { background-color: var(--accent-50) !important; }
+
+section h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Projects Showcase Grid - Override Bootstrap grid */
+#predictive-analytics .grid {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  #predictive-analytics .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #predictive-analytics .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Card Container - Override Bootstrap card styles */
+#predictive-analytics .card {
+  background-color: var(--white) !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease !important;
+  border: none !important;
+}
+
+/* Dark cards */
+#predictive-analytics .card.bg-gray-800 {
+  background-color: var(--gray-800) !important;
+  color: var(--white) !important;
+}
+
+#predictive-analytics .card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#predictive-analytics .card p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+#predictive-analytics .card.bg-gray-800 p {
+  color: #d1d5db;
+}
+
+#predictive-analytics .card canvas {
+  width: 100% !important;
+  height: 12rem !important;
+  margin-top: auto;
+  display: block;
+}
+
+/* Card hover effect */
+#predictive-analytics .card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Portfolio Link Overlay - FIXED POSITIONING */
+#predictive-analytics .portfolio-link {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  display: block !important;
+  cursor: pointer !important;
+  z-index: 10 !important; /* Above card content */
+  border-radius: inherit !important;
+  margin: 0 !important;
+  pointer-events: auto !important;
+}
+
+/* Portfolio Hover Overlay - FIXED STYLING */
+#predictive-analytics .portfolio-hover {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    135deg, 
+    rgba(12, 43, 78, 0.85) 0%, 
+    rgba(29, 84, 108, 0.85) 100%
+  ) !important;
+  color: var(--white) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  pointer-events: none !important;
+  z-index: 11 !important;
+  border-radius: inherit !important;
+  padding: 1rem !important;
+  box-sizing: border-box !important;
+}
+
+#predictive-analytics .portfolio-link:hover .portfolio-hover {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Portfolio Hover Content */
+#predictive-analytics .portfolio-hover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+#predictive-analytics .portfolio-hover-content p {
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+#predictive-analytics .portfolio-hover-content p:first-child {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+}
+
+#predictive-analytics .portfolio-hover-content .explanation_portfolio {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  opacity: 0.9 !important;
+}
+
+/* Ensure hover overlay text is white */
+#predictive-analytics .portfolio-hover,
+#predictive-analytics .portfolio-hover * {
+  color: var(--white) !important;
+}
+
+#predictive-analytics .portfolio-hover-content hr {
+  width: 60% !important;
+  margin: 0.75rem auto !important;
+  border: none !important;
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 1px !important;
+}
+
+/* Ensure card content is below overlay */
+#predictive-analytics .card > *:not(.portfolio-link) {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Button styling - Override Bootstrap */
+#predictive-analytics .card button {
+  margin-top: 1rem !important;
+  width: 100% !important;
+  background-color: var(--color-secondary) !important;
+  color: var(--white) !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0.375rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  transition: background-color 200ms ease !important;
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+#predictive-analytics .card button:hover {
+  background-color: var(--color-accent) !important;
+}
+
+/* Media zoom effect */
+#predictive-analytics .card .media-zoom {
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#predictive-analytics .card:hover .media-zoom {
+  transform: scale(1.02) !important;
+}
+
+/* Button theme helpers */
+.btn-primary { 
+  background-color: var(--color-primary) !important; 
+  color: var(--white) !important; 
+  border: none !important;
+}
+.btn-primary:hover { 
+  background-color: var(--color-secondary) !important; 
+}
+.btn-secondary { 
+  background-color: var(--color-secondary) !important; 
+  color: var(--white) !important; 
+  border: none !important;
+}
+.btn-secondary:hover { 
+  background-color: var(--color-accent) !important; 
+}
+.btn-accent { 
+  background-color: var(--color-accent) !important; 
+  color: var(--white) !important; 
+  border: none !important;
+}
+.btn-accent:hover { 
+  background-color: var(--color-secondary) !important; 
+}
+
+/* Modals - Override Bootstrap modal styles */
+.modal {
+  position: fixed !important;
+  inset: 0 !important;
+  background-color: var(--overlay) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 1000 !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: opacity 200ms ease !important;
+}
+
+.modal:not(.hidden) {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.modal.hidden {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.modal-content {
+  background-color: var(--white) !important;
+  padding: 2rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  max-width: 32rem !important;
+  width: 90% !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  transform: scale(0.95) !important;
+  transition: transform 200ms ease !important;
+  margin: 1rem !important;
+}
+
+.modal:not(.hidden) .modal-content {
+  transform: scale(1) !important;
+}
+
+.modal-close {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  background: none !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  color: #6b7280 !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  z-index: 2 !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  transition: all 150ms ease !important;
+}
+
+.modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Chart Styling */
+canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-primary);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* Tailwind utility overrides */
+.bg-blue-600 { 
+  background-color: var(--color-secondary) !important; 
+}
+.hover\:bg-blue-700:hover { 
+  background-color: var(--color-accent) !important; 
+}
+.bg-green-100 { 
+  background-color: var(--white) !important; 
+}
+.bg-gray-800 { 
+  background-color: var(--gray-800) !important; 
+}
+.text-white { 
+  color: var(--white) !important; 
+}
+

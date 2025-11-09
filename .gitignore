@@ -1,0 +1,85 @@
+# Sensitive project documents
+project/
+
+# Data files (often contain sensitive information)
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.json
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Environment and configuration files
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.cert
+config.ini
+secrets.json
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Python (if using Python)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# R (if using R)
+.Rhistory
+.RData
+.Ruserdata
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archive files (if they contain sensitive data)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Quarto build outputs (if you want to exclude generated HTML)
+# Uncomment if you want to ignore Quarto outputs
+# *_files/
+# *.html
+# !index.html
