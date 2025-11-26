@@ -129,14 +129,18 @@ section p {
 
 /* Card Container - Override Bootstrap card styles */
 #predictive-analytics .card {
-  background-color: var(--white) !important;
+  background: linear-gradient(
+    135deg, 
+    rgba(12, 43, 78, 0.85) 0%, 
+    rgba(29, 84, 108, 0.85) 100%
+  ) !important;
   padding: 1rem !important;
   border-radius: 0.5rem !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
-  height: 100% !important;
+  height: 470px !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important;
+  justify-content: center !important;
   position: relative !important;
   overflow: hidden !important;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease !important;
@@ -200,12 +204,8 @@ section p {
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background: linear-gradient(
-    135deg, 
-    rgba(12, 43, 78, 0.85) 0%, 
-    rgba(29, 84, 108, 0.85) 100%
-  ) !important;
-  color: var(--white) !important;
+  background: var(--white) !important;
+  color: #111827 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -226,38 +226,93 @@ section p {
   transform: translateY(0) !important;
 }
 
-/* Portfolio Hover Content */
-#predictive-analytics .portfolio-hover-content {
+/* Portfolio Hover Content - When in card (visible by default) */
+#predictive-analytics .card .portfolio-hover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  color: var(--white) !important;
+  padding: 1rem 0 !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+#predictive-analytics .card .portfolio-hover-content p {
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  color: var(--white) !important;
+}
+
+#predictive-analytics .card .portfolio-hover-content p:first-child {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--white) !important;
+}
+
+#predictive-analytics .card .portfolio-hover-content .explanation_portfolio {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  opacity: 0.9 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#predictive-analytics .card .portfolio-hover-content hr {
+  width: 60% !important;
+  margin: 0.75rem auto !important;
+  border: none !important;
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 1px !important;
+}
+
+/* Portfolio Hover Content - When in hover overlay */
+#predictive-analytics .portfolio-hover .portfolio-hover-content {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   gap: 0.5rem !important;
 }
 
-#predictive-analytics .portfolio-hover-content p {
+#predictive-analytics .portfolio-hover .portfolio-hover-content p {
   margin: 0 !important;
   line-height: 1.3 !important;
 }
 
-#predictive-analytics .portfolio-hover-content p:first-child {
+#predictive-analytics .portfolio-hover .portfolio-hover-content p:first-child {
   font-size: 1.5rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.025em !important;
 }
 
-#predictive-analytics .portfolio-hover-content .explanation_portfolio {
+#predictive-analytics .portfolio-hover .portfolio-hover-content .explanation_portfolio {
   font-size: 0.875rem !important;
   font-weight: 500 !important;
   opacity: 0.9 !important;
 }
 
-/* Ensure hover overlay text is white */
-#predictive-analytics .portfolio-hover,
-#predictive-analytics .portfolio-hover * {
-  color: var(--white) !important;
+/* Style content inside hover overlay - white background, dark text */
+#predictive-analytics .portfolio-hover h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  color: #111827 !important;
 }
 
-#predictive-analytics .portfolio-hover-content hr {
+#predictive-analytics .portfolio-hover p {
+  font-size: 0.875rem !important;
+  color: #4b5563 !important;
+  margin-bottom: 1rem !important;
+}
+
+#predictive-analytics .portfolio-hover img {
+  max-width: 100% !important;
+  max-height: 12rem !important;
+  object-fit: contain !important;
+}
+
+#predictive-analytics .portfolio-hover .portfolio-hover-content hr {
   width: 60% !important;
   margin: 0.75rem auto !important;
   border: none !important;
@@ -268,6 +323,202 @@ section p {
 
 /* Ensure card content is below overlay */
 #predictive-analytics .card > *:not(.portfolio-link) {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Productivity Section - Same styles as predictive-analytics */
+#productivity .grid {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  #productivity .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #productivity .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+#productivity .card {
+  background: linear-gradient(
+    135deg, 
+    rgba(12, 43, 78, 0.85) 0%, 
+    rgba(29, 84, 108, 0.85) 100%
+  ) !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  height: 470px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease !important;
+  border: none !important;
+}
+
+#productivity .card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18) !important;
+}
+
+#productivity .portfolio-link {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  display: block !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  border-radius: inherit !important;
+  margin: 0 !important;
+  pointer-events: auto !important;
+}
+
+#productivity .portfolio-hover {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--white) !important;
+  color: #111827 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  pointer-events: none !important;
+  z-index: 11 !important;
+  border-radius: inherit !important;
+  padding: 1rem !important;
+  box-sizing: border-box !important;
+}
+
+#productivity .portfolio-link:hover .portfolio-hover {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+#productivity .card .portfolio-hover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  color: var(--white) !important;
+  padding: 1rem 0 !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+#productivity .card .portfolio-hover-content p {
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  color: var(--white) !important;
+}
+
+#productivity .card .portfolio-hover-content p:first-child {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--white) !important;
+}
+
+#productivity .card .portfolio-hover-content .explanation_portfolio {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  opacity: 0.9 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#productivity .card .portfolio-hover-content hr {
+  width: 60% !important;
+  margin: 0.75rem auto !important;
+  border: none !important;
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 1px !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content p {
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  color: #111827 !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content p:first-child {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  color: #111827 !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content .explanation_portfolio {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  opacity: 0.8 !important;
+  color: #4b5563 !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content hr {
+  width: 60% !important;
+  margin: 0.75rem auto !important;
+  border: none !important;
+  height: 2px !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 1px !important;
+}
+
+/* Style content inside hover overlay - white background, dark text */
+#productivity .portfolio-hover h3 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  color: #111827 !important;
+}
+
+#productivity .portfolio-hover p {
+  font-size: 0.875rem !important;
+  color: #4b5563 !important;
+  margin-bottom: 1rem !important;
+}
+
+#productivity .portfolio-hover img {
+  max-width: 100% !important;
+  max-height: 12rem !important;
+  object-fit: contain !important;
+}
+
+#productivity .portfolio-hover .portfolio-hover-content hr {
+  width: 60% !important;
+  margin: 0.75rem auto !important;
+  border: none !important;
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 1px !important;
+}
+
+#productivity .card > *:not(.portfolio-link) {
   position: relative !important;
   z-index: 1 !important;
 }

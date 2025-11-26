@@ -16,176 +16,275 @@
   <!-- Navigation -->
   <nav class="bg-blue-600 text-white p-4 sticky top-0">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">[Your Name]'s Data Science Portfolio</h1>
+      <h1 class="text-2xl font-bold">CATHY LI's Data Science Portfolio</h1>
       <ul class="flex space-x-4">
-        <li><a href="#introduction" class="hover:underline">Introduction</a></li>
-        <li><a href="#projects-showcase" class="hover:underline">Projects Showcase</a></li>
-        <li><a href="#predictive-analytics" class="hover:underline">Predictive Analytics</a></li>
+        <!-- <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+        <li><a href="#projects-showcase" class="hover:underline">Projects Showcase</a></li> -->
+        <li><a href="#predictive-analytics" class="hover:underline">Decision Facilitation</a></li>
         <li><a href="#productivity" class="hover:underline">Productivity</a></li>
-        <li><a href="#deployment" class="hover:underline">Deployment</a></li>
-        <li><a href="#conclusion" class="hover:underline">Conclusion</a></li>
+        <!-- <li><a href="#deployment" class="hover:underline">Deployment</a></li>
+        <li><a href="#conclusion" class="hover:underline">Conclusion</a></li> -->
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="introduction" class="py-12 section-primary">
+  <!-- <section id="introduction" class="py-12 section-primary">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4">From Scratch to Data Product</h2>
       <p class="text-lg mb-6">[Your Name], a data scientist with expertise in AWS, Python, Qlik Sense, and predictive modeling.</p>
       <p class="text-lg">[Placeholder: Briefly describe your background, e.g., years of experience, key skills like ETL pipelines, regression modeling, and BI tools. Add a call-to-action, e.g., "Explore my projects below!"]</p>
     </div>
-  </section>
+  </section> -->
 
 
 
   <!-- Predictive Analytics Section -->
   <section id="predictive-analytics" class="py-12 section-secondary">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Facilitating Smarter Decisions</h2>
+      <h2 class="text-3xl font-bold mb-6">Facilitating Smarter Decisions： From Picking the Right Locations to Winning Customers</h2>
       <p style="font-size: 18px; color: grey; font-style: italic;" class="mb-4">Turning complex datasets into predictive insights that drive smarter, faster business outcomes</p>
       <ul class="mb-4 list-disc pl-5 space-y-2 text-left text-gray-500">
         <li><strong>Site Selection:</strong> Provided predictive insights for selecting new shop locations by combining data from Points of Interest, demographic information, and internal shop data.</li>
+        <li><strong>Shop Elasticity Analysis:</strong> Analyzed price sensitivity for each shop to forecast the sales impact based on price changes, helping to optimize pricing strategies.</li>
         <li><strong>Customer Segmentation:</strong> Conducted customer analysis through survival analysis and clustering techniques to facilitate targeted marketing strategies tailored to different customer segments.</li>
         <li><strong>Causal Inference:</strong> Employed causal inference methods to enhance decision-making processes, allowing for more informed and effective strategies.</li>
-        <li><strong>Shop Elasticity Analysis:</strong> Analyzed price sensitivity for each shop to forecast the sales impact based on price changes, helping to optimize pricing strategies.</li>
+
       </ul>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
         
         <!-- Card 1: Location Evaluation for New Site -->
       <div class="bg-white p-4 rounded-lg shadow card">
-          <h3 class="text-xl font-semibold mb-2">Location Evaluation for New Site (LENS)</h3>
-          <p class="text-gray-700 mb-4">The LENS model utilizes AI and machine learning to predict daily sales for new site locations, aiding in evaluating the potential of prospective sites for informed decision-making.</p>
-          <div class="h-48 overflow-hidden flex items-center justify-center">
-            <!-- IMANGE OF THE PROJECT -->
-            <img id="projectChart"
-                 src="assets/images/lens_cover.png"
-                 alt="Location Evaluation for New Site (LENS) chart"
-                 class="w-full h-full object-contain media-zoom">
+          <div class="portfolio-hover-content">
+            <p>Location Evaluation for New Site (LENS)</p>
+            <hr>
+            <p class="explanation_portfolio">A tool to evaluate the potential of new site locations!</p>
           </div>
           <div class="portfolio-link" onclick="openModal('ml-project1-modal')" role="button" aria-label="View details">
             <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Location Evaluation for New Site (LENS)</p>
-                <hr>
-                <p class="explanation_portfolio">A tool to evaluate the potential of new site locations!</p>
+              <h3 class="text-xl font-semibold mb-2">Location Evaluation for New Site (LENS)</h3>
+              <p class="text-gray-700 mb-4">The LENS model utilizes AI and machine learning to predict daily sales for new site locations, aiding in evaluating the potential of prospective sites for informed decision-making.</p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/lens_cover.png"
+                     alt="Location Evaluation for New Site (LENS) chart"
+                     class="w-full h-full object-contain media-zoom">
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: Customer Analysis -->
+        <!-- Card 2:  Shop Elasticity Analysis -->
         <div class="bg-white p-4 rounded-lg shadow card">
-          <h3 class="text-xl font-semibold mb-2">Customer Segmentation Analysis</h3>
-          <p class="text-gray-700 mb-4">Survival analysis and clustering techniques were applied
-            to segment customers both before and after the CRM implementation,
-            enabling precision promotion strategies instead of a one-size-fits-all approach.</p>
-          <div class="h-48 overflow-hidden flex items-center justify-center">
-            <!-- IMANGE OF THE PROJECT -->
-            <img id="projectChart"
-                 src="assets/images/customer_cover.png"
-                 alt="Customer Segmentation Analysis"
-                 class="w-full h-full object-contain media-zoom">
+          <div class="portfolio-hover-content">
+            <p>Shop Elasticity Analysis</p>
+            <hr>
+            <p class="explanation_portfolio">Reveals true price sensitivity in shop level.</p>
           </div>
           <div class="portfolio-link" onclick="openModal('ml-project2-modal')" role="button" aria-label="View details">
             <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Customer Segmentation Analysis</p>
-                <hr>
-                <p class="explanation_portfolio">Customer Analysis to refine the promotion strategies.</p>
+              <h3 class="text-xl font-semibold mb-2">Shop Elasticity Analysis</h3>
+              <p class="text-gray-700 mb-4">Customers respond differently to price changes depending on the shop but a single company-wide elasticity estimate hides the local differences. 
+                Therefore, shop-level price elasticity help to optimise pricing by shop.</p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/pe_cover.png"
+                     alt="Customer Segmentation Analysis"
+                     class="w-full h-full object-contain media-zoom">
               </div>
             </div>
           </div>
         </div>
 
 
-        <!-- Card 3: Causal Inference -->
+        <!-- Card 3: Customer Analysis -->
         <div class="bg-white p-4 rounded-lg shadow card">
-          <h3 class="text-xl font-semibold mb-2">Causal Inference Analysis</h3>
-          <p class="text-gray-700 mb-4">OMUSUBI Pass, the company’s first massive campaign, reached over 1 million use.
-            However, simple before-and-after comparisons were confounded by seasonality, and external events.
-            To address this, causal inference was applied to isolate the true impact of the Pass, accurately quantifying the sales uplift.</p>
-          <div class="h-48 overflow-hidden flex items-center justify-center">
-            <!-- IMANGE OF THE PROJECT -->
-            <img id="projectChart"
-                 src="assets/images/causal_cover.png"
-                 alt="Customer Segmentation Analysis"
-                 class="w-full h-full object-contain media-zoom">
+          <div class="portfolio-hover-content">
+            <p>Customer Segmentation Analysis</p>
+            <hr>
+            <p class="explanation_portfolio">Customer Analysis to refine the promotion strategies.</p>
           </div>
           <div class="portfolio-link" onclick="openModal('ml-project3-modal')" role="button" aria-label="View details">
             <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Causal Inference Analysis</p>
-                <hr>
-                <p class="explanation_portfolio">Analyzing the effects of interventions to enable confident, data-driven strategies.</p>
+              <h3 class="text-xl font-semibold mb-2">Customer Segmentation Analysis</h3>
+              <p class="text-gray-700 mb-4">Survival analysis and clustering techniques were applied
+                to segment customers both before and after the CRM implementation,
+                enabling precision promotion strategies instead of a one-size-fits-all approach.</p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/customer_cover.png"
+                     alt="Customer Segmentation Analysis"
+                     class="w-full h-full object-contain media-zoom">
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 4:  Shop Elasticity Analysis -->
-        <div class="bg-white p-4 rounded-lg shadow card">
-          <h3 class="text-xl font-semibold mb-2">Shop Elasticity Analysis</h3>
-          <p class="text-gray-700 mb-4">Customers respond differently to price changes depending on the shop but a single company-wide elasticity estimate hides the local differences. 
-            Therefore, shop-level price elasticity help to optimise pricing by shop.</p>
-            <div class="h-48 overflow-hidden flex items-center justify-center">
-              <!-- IMANGE OF THE PROJECT -->
-              <img id="projectChart"
-                   src="assets/images/pe_cover.png"
-                   alt="Customer Segmentation Analysis"
-                   class="w-full h-full object-contain media-zoom">
-                  </div>
-                  <div class="portfolio-link" onclick="openModal('ml-project4-modal')" role="button" aria-label="View details">
-                    <div class="portfolio-hover">
-                      <div class="portfolio-hover-content">
-                        <p>Shop Elasticity Analysis</p>
-                        <hr>
-                        <p class="explanation_portfolio">Reveals true price sensitivity in shop level.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
+        <!-- Card 4: Causal Inference -->
+        <div class="bg-white p-4 rounded-lg shadow card">
+          <div class="portfolio-hover-content">
+            <p>Causal Inference Analysis</p>
+            <hr>
+            <p class="explanation_portfolio">Analyzing the effects of interventions to enable confident, data-driven strategies.</p>
+          </div>
+          <div class="portfolio-link" onclick="openModal('ml-project4-modal')" role="button" aria-label="View details">
+            <div class="portfolio-hover">
+              <h3 class="text-xl font-semibold mb-2">Causal Inference Analysis</h3>
+              <p class="text-gray-700 mb-4">OMUSUBI Pass, the company's first massive campaign, reached over 1 million use.
+                However, simple before-and-after comparisons were confounded by seasonality, and external events.
+                To address this, causal inference was applied to isolate the true impact of the Pass, accurately quantifying the sales uplift.</p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/causal_cover.png"
+                     alt="Customer Segmentation Analysis"
+                     class="w-full h-full object-contain media-zoom">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section> 
 
   <!-- Productivity Section -->
-  <section id="productivity" class="py-12 section-accent">
+  <section id="productivity" class="py-12 section-secondary">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Enhancing Productivity: Tools and Automation</h2>
-      <p class="mb-4">[Placeholder: Describe an AI project, e.g., a classification agent using LangChain or a RAG system for querying data.]</p>
-      <p class="mb-4">[Placeholder: Detail a Qlik Sense project, e.g., "Developed a self-service dashboard for transaction queries, used by 3 business units."]</p>
-      <div class="mt-6">
-        <button onclick="openModal('productivity-modal')" class="btn-accent px-4 py-2 rounded">View Details</button>
-      </div>
-    </div>
-  </section>
+      <h2 class="text-3xl font-bold mb-6">Transforming Productivity: From Manual Processes to AI-Powered Efficiency</h2>
+      <p style="font-size: 18px; color: grey; font-style: italic;" class="mb-4">Turning raw data into instantly usable assets — freeing hundreds of hours, eliminating repetitive work, and enhancing team productivity.
+        </p>
+      <ul class="mb-4 list-disc pl-5 space-y-2 text-left text-gray-500">
+        <li><strong>Centralized the ETL flow into an AWS Data Lake:</strong> unifying all sources into a reliable, high-speed foundation—reducing data ETL time from hours to minutes.</li>
+        <li><strong>Empowered users with Qlik Sense dashboards:</strong> creating a single source of truth that enabled teams to access insights instantly and generate custom reports independently.</li>
+        <li><strong>Automated reporting:</strong> by analyzing business user requirements and replacing manual workflows with scheduled, accurate outputs—saving dozens of hours each week.</li>
+        <li><strong>Deployed AI automation:</strong> using n8n and AWS Lambda, converting remaining repetitive tasks into intelligent, agents shifting operations from reactive to proactive.</li>
+      </ul>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-  <!-- Deployment and Visualization Section -->
-  <section id="deployment" class="py-12 section-primary">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6">Deployment and Visualization: Turning Insights into Products</h2>
-      <p class="mb-4">[Placeholder: Describe deployment, e.g., hosting a model on AWS Lambda or a dashboard on Qlik Cloud.]</p>
-      <p class="mb-4">[Placeholder: Highlight visualizations, e.g., "Created interactive Plotly histograms with KDE smoothing for user analytics."]</p>
-      <div class="mt-6">
-        <button onclick="openModal('deployment-modal')" class="btn-primary px-4 py-2 rounded">View Details</button>
+        
+        <!-- Card 1: AWS Data Lake -->
+      <div class="bg-white p-4 rounded-lg shadow card">
+          <div class="portfolio-hover-content">
+            <p>AWS Data Lake Deployment</p>
+            <hr>
+            <p class="explanation_portfolio">Streamlining data integration for faster and more efficient data analysis!</p>
+          </div>
+          <div class="portfolio-link" onclick="openModal('pd-project1-modal')" role="button" aria-label="View details">
+            <div class="portfolio-hover">
+              <h3 class="text-xl font-semibold mb-2">AWS Data Lake</h3>
+              <p class="text-gray-700 mb-4">Through Data Lake Implementation, various data sources were integrated  
+                into the AWS Lake, including POS, CRM,
+                people counting, ERP, and in-store application data. 
+                This enabled the ETL flow to run in AWS, accelerating data retrieval. </p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/aws_cover.png"
+                     alt="AWS Data Lake"
+                     class="w-full h-full object-contain media-zoom">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Qlik Sense Dashboards -->
+        <div class="bg-white p-4 rounded-lg shadow card">
+          <div class="portfolio-hover-content">
+            <p>Qlik Sense Initiative</p>
+            <hr>
+            <p class="explanation_portfolio">Empowered users with Qlik Sense by a single source of truth.</p>
+          </div>
+          <div class="portfolio-link" onclick="openModal('pd-project2-modal')" role="button" aria-label="View details">
+            <div class="portfolio-hover">
+              <h3 class="text-xl font-semibold mb-2">Qlik Sense Initiative</h3>
+              <p class="text-gray-700 mb-4">The Qlik Sense initiative empowered operation teams by providing independent data access, 
+                replacing manual Excel reports. A centralized data model and dashboards were developed, 
+                enabling proactive decision-making and improving efficiency in sales and loss monitoring. 
+               </p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/qlik_cover.png"
+                     alt="Customer Segmentation Analysis"
+                     class="w-full h-full object-contain media-zoom">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Card 3: Automation Report -->
+        <div class="bg-white p-4 rounded-lg shadow card">
+          <div class="portfolio-hover-content">
+            <p>Automation Reports</p>
+            <hr>
+            <p class="explanation_portfolio">Minimising manual work of different business users and our team.</p>
+          </div>
+          <div class="portfolio-link" onclick="openModal('pd-project3-modal')" role="button" aria-label="View details">
+            <div class="portfolio-hover">
+              <h3 class="text-xl font-semibold mb-2">Automation Reports</h3>
+              <p class="text-gray-700 mb-4">Before launching automated reports, 
+                manual report generation took 2–3 hours each day and required effort from our team to monitor and perform data quality checks.
+                After implemented, business users can now easily monitor daily sales. Our team also have reduced the time needed to detect and investigate anomalies.
+              </p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/repoert_cover.png"
+                     alt="Automated Report"
+                     class="w-full h-full object-contain media-zoom">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4:  AI Automation -->
+        <div class="bg-white p-4 rounded-lg shadow card">
+          <div class="portfolio-hover-content">
+            <p>AI Automation</p>
+            <hr>
+            <p class="explanation_portfolio">Unlocks the power of AI to enhance efficiency.</p>
+          </div>
+          <div class="portfolio-link" onclick="openModal('pd-project4-modal')" role="button" aria-label="View details">
+            <div class="portfolio-hover">
+              <h3 class="text-xl font-semibold mb-2">AI Automation</h3>
+              <p class="text-gray-700 mb-4">Leverage the AI model to automate labor-intensive manual tasks,
+                such as shop event classification and daily report summarisation.</p>
+              <div class="h-48 overflow-hidden flex items-center justify-center">
+                <!-- IMANGE OF THE PROJECT -->
+                <img id="projectChart"
+                     src="assets/images/ai_cover.png"
+                     alt="Customer Segmentation Analysis"
+                     class="w-full h-full object-contain media-zoom">
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
+  </section> 
+
 
   <!-- Conclusion Section -->
-  <section id="conclusion" class="py-12 section-secondary">
+  <!-- <section id="conclusion" class="py-12 section-secondary">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-6">Conclusion and Future Work</h2>
       <p class="mb-4">[Placeholder: Summarize impacts, e.g., "Improved data processing efficiency by 50% and enabled data-driven decisions across teams."]</p>
       <p class="mb-4">[Placeholder: Outline future goals, e.g., "Exploring advanced ML models and multi-BU dashboard rollouts."]</p>
       <a href="mailto:[Your Email]" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Contact Me</a>
     </div>
-  </section>
+  </section> -->
 
   <!-- Modals -->
-   <!-- Decision Making with Machine Learning-->>
-     <!-- Modal 1-->>
+  <!-- Decision Making with Machine Learning-->
+    <!-- Modal 1-->
    <div id="ml-project1-modal" class="modal hidden">
     <div class="modal-content">
         <button onclick="closeModal('ml-project1-modal')" class="modal-close">&times;</button>
@@ -214,10 +313,43 @@
     </div>
 </div>
 
-<!-- Modal 2-->>
+<!-- Modal 2-->
 <div id="ml-project2-modal" class="modal hidden">
   <div class="modal-content">
       <button onclick="closeModal('ml-project2-modal')" class="modal-close">&times;</button>
+
+      <h3 class="text-2xl font-bold mb-4">Shop Elasticity Analysis</h3>
+      <!-- <p class="mb-4">[Placeholder: One-paragraph overview of the project's goal, context, and outcome.]</p> -->
+      <div class="mb-4 bg-gray-100 rounded p-4">
+          <h4 class="text-lg font-semibold mb-2">Highlights</h4>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <li>Ran <strong>log-log demand model </strong> to quantify true price sensitivity, delivering a direct %ΔQuantity per %ΔPrice 
+              while controlling for promotions, seasonality, and shop-specific factors</li>
+            <li>Built shop-level elasticity metrics - <strong>Delta Daily QTY</strong> (the change in daily quantity sold by price elasticity)for and 
+              <strong>Price Elasticity</strong>,to capture localized pricing power</li>
+           <li>Applied <strong>K-means clustering</strong> on the two metrics to segment shops into high-, medium-, and low-elasticity clusters, enabling targeted pricing by clusters</li>
+  
+          </ul>
+      </div>
+      <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+        <img src="assets/images/pe_content_1.png" alt="OMUSUBI Pass by ITS" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+      </div>
+      <div>
+        <p class="text-sm text-gray-400 text-center mb-4">The effects of price elasticity</p> 
+    </div>
+    <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+      <img src="assets/images/pe_content_2.png" alt="K-means clustering to segment shops by price elasticity" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+    </div>
+    <div>
+      <p class="text-sm text-gray-400 text-center mb-4">K-means clustering to segment shops by price elasticity</p> 
+  </div>
+</div>
+</div>
+
+<!-- Modal 3-->
+<div id="ml-project3-modal" class="modal hidden">
+  <div class="modal-content">
+      <button onclick="closeModal('ml-project3-modal')" class="modal-close">&times;</button>
 
       <h3 class="text-2xl font-bold mb-4">Customer Segmentation Analysis</h3>
       <!-- <p class="mb-4">[Placeholder: One-paragraph overview of the project's goal, context, and outcome.]</p> -->
@@ -246,10 +378,10 @@
   </div>
 </div>
 
-<!-- Modal 3-->>
-<div id="ml-project3-modal" class="modal hidden">
+<!-- Modal 4-->
+<div id="ml-project4-modal" class="modal hidden">
   <div class="modal-content">
-      <button onclick="closeModal('ml-project3-modal')" class="modal-close">&times;</button>
+      <button onclick="closeModal('ml-project4-modal')" class="modal-close">&times;</button>
 
       <h3 class="text-2xl font-bold mb-4">Causal Inference Analysis</h3>
       <!-- <p class="mb-4">[Placeholder: One-paragraph overview of the project's goal, context, and outcome.]</p> -->
@@ -278,37 +410,129 @@
 
   </div>
 </div>
-<!-- Modal 4-->>
-<div id="ml-project4-modal" class="modal hidden">
-  <div class="modal-content">
-      <button onclick="closeModal('ml-project4-modal')" class="modal-close">&times;</button>
 
-      <h3 class="text-2xl font-bold mb-4">Shop Elasticity Analysis</h3>
-      <!-- <p class="mb-4">[Placeholder: One-paragraph overview of the project's goal, context, and outcome.]</p> -->
-      <div class="mb-4 bg-gray-100 rounded p-4">
-          <h4 class="text-lg font-semibold mb-2">Highlights</h4>
-          <ul class="list-disc pl-5 space-y-1 text-gray-700">
-            <li>Ran <strong>log-log demand model </strong> to quantify true price sensitivity, delivering a direct %ΔQuantity per %ΔPrice 
-              while controlling for promotions, seasonality, and shop-specific factors</li>
-            <li>Built shop-level elasticity metrics - <strong>Delta Daily QTY</strong> (the change in daily quantity sold by price elasticity)for and 
-              <strong>Price Elasticity</strong>,to capture localized pricing power</li>
-           <li>Applied <strong>K-means clustering</strong> on the two metrics to segment shops into high-, medium-, and low-elasticity clusters, enabling targeted pricing by clusters</li>
+
+  <!-- Producitivity Enhancement-->
+    <!-- Modal 1: Data Lake-->
+     <div id="pd-project1-modal" class="modal hidden">
+      <div class="modal-content">
+          <button onclick="closeModal('pd-project1-modal')" class="modal-close">&times;</button>
   
-          </ul>
+          <h3 class="text-2xl font-bold mb-4">AWS Data Lake</h3>
+          <!-- <p class="mb-4">[Placeholder: One-paragraph overview of the project's goal, context, and outcome.]</p> -->
+          <div class="mb-4 bg-gray-100 rounded p-4">
+              <h4 class="text-lg font-semibold mb-2">Highlights</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>Integrated various data sources including POS, CRM,
+                    people counting, ERP, and in-store application data into a unified, partitioned data lake in S3 <strong>(Parquet + Glue Catalog)</strong> to
+                    enable a consistent and reliable data foundation for analytics and reporting.</li>
+                    <li>Orchestrated a resilient, fully observable pipeline using 
+                      <strong>AWS Step Functions and EventBridge</strong> 
+                      to sequence Glue Crawlers → Iceberg table maintenance → Glue ETL Jobs → SNS alerts, achieving end-to-end automation, automatic retries, and a 90%+ reduction in day end incidents.</li>
+                      <li>Implemented <strong>Terraform</strong> for the entire AWS lakehouse environment, ensuring reproducible deployments, safe configuration changes, and seamless dev/staging/prod with full change history.</li>
+  
+              </ul>
+          </div>
+          <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+            <img src="assets/images/aws_content_1.png" alt="AWS CRM ETL Flow" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+          </div>
+          <div>
+            <p class="text-sm text-gray-400 text-center mb-4">CRM ETL Flow</p> 
+        </div>
       </div>
-      <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
-        <img src="assets/images/pe_content_1.png" alt="OMUSUBI Pass by ITS" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+  </div>
+  
+    <!-- Modal 2: Qlik-->
+    <div id="pd-project2-modal" class="modal hidden">
+     <div class="modal-content">
+         <button onclick="closeModal('pd-project2-modal')" class="modal-close">&times;</button>
+
+         <h3 class="text-2xl font-bold mb-4">Qlik Sense Initiative</h3>
+         <div class="mb-4 bg-gray-100 rounded p-4">
+             <h4 class="text-lg font-semibold mb-2">Highlights</h4>
+             <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                 <li><strong>Designed and delivered</strong> a centralized, governed data model in Qlik Sense Cloud, integrating POS, ERP (NetSuite), CRM, and operational sources into a unified source of truth.</li>
+                 <li><strong>Built and deployed</strong> 15+ dashboard apps, including a comprehensive Sales Performance Review covering sales composition, transactions, average spend, basket size, and more.</li>
+                 <li><strong>Led the Qlik Sense Self-Service Initiative</strong> for shop operations by running knowledge transfer sessions and creating quick-reference guides so teams can independently build and customize dashboards.</li>
+                 <li><strong>Achieved ~50% fewer data requests</strong>, eliminated manual Excel reporting, and empowered business users to generate actionable insights for daily decisions.</li>
+
+             </ul>
+         </div>
+         <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+           <img src="assets/images/qlik_content_1.png" alt="Qlik Sense Initiative" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+         </div>
+         <div>
+           <p class="text-sm text-gray-400 text-center mb-4">Qlik Sense Dashboard for Shop Master</p> 
+       </div>
+       <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+        <img src="assets/images/qlik_content_2.png" alt="Qlik Sense Initiative" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
       </div>
       <div>
-        <p class="text-sm text-gray-400 text-center mb-4">The effects of price elasticity</p> 
+        <p class="text-sm text-gray-400 text-center mb-4">Qlik Sense Apps created by the Shop Operations Team</p> 
     </div>
-    <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
-      <img src="assets/images/pe_content_2.png" alt="K-means clustering to segment shops by price elasticity" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
-    </div>
-    <div>
-      <p class="text-sm text-gray-400 text-center mb-4">K-means clustering to segment shops by price elasticity</p> 
-  </div>
+     </div>
+ </div>
 
-
+    <!-- Modal 3: Automation Report-->
+     <div id="pd-project3-modal" class="modal hidden">
+      <div class="modal-content">
+          <button onclick="closeModal('pd-project3-modal')" class="modal-close">&times;</button>
+ 
+          <h3 class="text-2xl font-bold mb-4">Automation Report</h3>
+          <div class="mb-4 bg-gray-100 rounded p-4">
+              <h4 class="text-lg font-semibold mb-2">Highlights</h4>
+              <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li><strong>Designed and deployed</strong> daily and weekly sales performance reports 
+                  using <strong>AWS and Qlik pipelines</strong>, tailored to meet the needs of the operations team</li>
+                <li><strong>Developed and automated</strong> an anomaly detection system for CRM, POS, and ERP data sources, 
+                  proactively identifying data quality issues and delivering early-alert reports 
+                  to the team for immediate resolution and improved data reliability.</li>
+            </ul>
+          </div>
+          <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+            <img src="assets/images/report_content_1.png" alt="Automation Report" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+          </div>
+          <div>
+            <p class="text-sm text-gray-400 text-center mb-4">Weekly Area Supervisors Sales Report</p> 
+        </div>
+        <!-- <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+         <img src="assets/images/qlik_content_2.png" alt="Qlik Sense Initiative" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+       </div>
+       <div>
+         <p class="text-sm text-gray-400 text-center mb-4">Qlik Sense Apps created by the Shop Operations Team</p> 
+     </div> -->
+      </div>
   </div>
-</div>
+    <!-- Modal 4: AI-->
+     <div id="pd-project4-modal" class="modal hidden">
+      <div class="modal-content">
+          <button onclick="closeModal('pd-project4-modal')" class="modal-close">&times;</button>
+ 
+          <h3 class="text-2xl font-bold mb-4">AI Automation</h3>
+          <div class="mb-4 bg-gray-100 rounded p-4">
+            <h4 class="text-lg font-semibold mb-2">Highlights</h4>
+            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                <li><strong>Built and deployed</strong> an AI-powered email agent using <strong>n8n</strong>, 
+                  automatically summarizing daily operational results and instantly distributing concise, 
+                  actionable snapshots to relevant stakeholders.</li>
+                <li><strong>Designed an AWS Lambda-based processing pipeline</strong> integrated with an 
+                  <strong>event classification AI agent</strong> to handle inconsistent manual inputs from shops, 
+                  standardizing data with minimal human intervention and providing clean, reliable inputs for the forecasting model.</li>
+            </ul>
+        </div>
+          <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+            <img src="assets/images/ai_content_1.png" alt="n8n" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+          </div>
+          <div>
+            <p class="text-sm text-gray-400 text-center mb-4">Summary by Email Agent in n8n</p> 
+        </div>
+        <div class="h-80 w-full rounded flex items-center justify-center text-gray-500">
+         <img src="assets/images/ai_content_2.png" alt="AWS Flow" class="w-full h-full object-contain media-zoom" onclick="zoomImage(this)">
+       </div>
+       <div>
+         <p class="text-sm text-gray-400 text-center mb-4">Event Classification Agent in AWS</p> 
+     </div>
+      </div>
+  </div>
+</body>
+</html>
